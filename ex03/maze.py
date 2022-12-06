@@ -23,7 +23,7 @@ def main_proc():
         if key == "Left": mx += 1
         if key == "Right": mx -= 1        
     cx, cy = mx*100+50, my*100+50
-    canvas.coords("mikata", cx, cy,bg="black")
+    canvas.coords("mikata", cx, cy)
     root.after(100, main_proc)
 
 
