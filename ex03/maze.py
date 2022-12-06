@@ -11,13 +11,13 @@ def key_up(event):
     key = ""
 
 
-def main_proc():
+def main_proc():                    #移動に関する関数
     global cx, cy, mx, my
     if key == "Up": my -= 1
     if key == "Down": my += 1
     if key == "Left": mx -= 1
     if key == "Right": mx += 1
-    if maze_lst[mx][my] == 1: 
+    if maze_lst[mx][my] == 1:  # 移動先が壁だったら
         if key == "Up": my += 1
         if key == "Down": my -= 1
         if key == "Left": mx += 1
@@ -28,7 +28,7 @@ def main_proc():
 
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":          #キャラクターに関する関数
     root = tk.Tk()
     root.title("迷えるこうかとん")
     canvas = tk.Canvas(root, width=1500, height=900, bg="black")
